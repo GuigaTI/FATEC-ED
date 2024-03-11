@@ -1,14 +1,13 @@
 #include <cstdlib>
 #include <iostream>
-#include <math.h>
 #include <locale.h>
 
 using namespace std;
 
 int main()
 {
-    int matriz[6][6];
-    int mult = 1;
+    double matriz[6][6];
+    double mult = 1;
     for (int i = 0; i < 6; i++)
     {
         for (int j = 0; j < 6; j++)
@@ -23,6 +22,19 @@ int main()
         {
             mult = mult * matriz[i][j];
         }
+    }
+    
+  cout << endl << "Os valores abaixo da diagonal principal sao: " << endl;
+  
+    for (int i = 0; i < 6; i++)
+    {
+        for (int j = 0; j < 6; j++)
+        {
+            if(j<i){
+                cout << matriz[i][j] << "\t";    
+            }
+        }
+        cout << "\n\n";
     }
     cout << "O produto dos valores abaixo da diagonal principal e: " << mult;
 
